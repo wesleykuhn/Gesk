@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{02163B76-1EDB-44BD-820C-6D0B2087ADF7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Gesk</RootNamespace>
+    <AssemblyName>Gesk</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Gesk.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp, Version=5.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.0.5\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\Bases\Default.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bases\Default.Designer.cs">
+      <DependentUpon>Default.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Components\CmpBtnTopClose.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Components\CmpBtnTopClose.Designer.cs">
+      <DependentUpon>CmpBtnTopClose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Components\CmpBtnTopMinimize.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Components\CmpBtnTopMinimize.Designer.cs">
+      <DependentUpon>CmpBtnTopMinimize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Components\CmpBtnTopResize.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Components\CmpBtnTopResize.Designer.cs">
+      <DependentUpon>CmpBtnTopResize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Unique\FRM_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Unique\FRM_Login.Designer.cs">
+      <DependentUpon>FRM_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Unique\FRM_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Unique\FRM_Main.Designer.cs">
+      <DependentUpon>FRM_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Unique\MainChildren\FRM_Main_KitAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Unique\MainChildren\FRM_Main_KitAdd.Designer.cs">
+      <DependentUpon>FRM_Main_KitAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Unique\MainChildren\FRM_Main_KitDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Unique\MainChildren\FRM_Main_KitDetails.Designer.cs">
+      <DependentUpon>FRM_Main_KitDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Unique\MainChildren\FRM_Main_LineTag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Unique\MainChildren\FRM_Main_LineTag.Designer.cs">
+      <DependentUpon>FRM_Main_LineTag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Unique\MainChildren\FRM_Main_KltTag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Unique\MainChildren\FRM_Main_KltTag.Designer.cs">
+      <DependentUpon>FRM_Main_KltTag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Unique\MainChildren\FRM_Main_ProductsAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Unique\MainChildren\FRM_Main_ProductsAdd.Designer.cs">
+      <DependentUpon>FRM_Main_ProductsAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Unique\MainChildren\FRM_Main_AddressesAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Unique\MainChildren\FRM_Main_AddressesAdd.Designer.cs">
+      <DependentUpon>FRM_Main_AddressesAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Unique\MainChildren\FRM_Main_ProductsAddressUpdateDuplicates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Unique\MainChildren\FRM_Main_ProductsAddressUpdateDuplicates.Designer.cs">
+      <DependentUpon>FRM_Main_ProductsAddressUpdateDuplicates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Library\Checker\StartUp.cs" />
+    <Compile Include="Library\Checker\Validator.cs" />
+    <Compile Include="Library\CustomStream\Reader.cs" />
+    <Compile Include="Library\Entities\User.cs" />
+    <Compile Include="Library\ErrorsCare.cs" />
+    <Compile Include="Library\GlobalVariables.cs" />
+    <Compile Include="Library\InformationsCore\Directories.cs" />
+    <Compile Include="Library\Objects\Kit.cs" />
+    <Compile Include="Library\Objects\Product.cs" />
+    <Compile Include="Library\Objects\SubObjects\Address.cs" />
+    <Compile Include="Library\Objects\SubObjects\KitProduct.cs" />
+    <Compile Include="Library\Outputs\Pdf.cs" />
+    <Compile Include="Library\Outputs\AdobePrint.cs" />
+    <Compile Include="Library\Protheus12Xml\SubObjects\Duplicate.cs" />
+    <Compile Include="Library\Protheus12Xml\SubObjects\Product_Address.cs" />
+    <Compile Include="Library\Serialization\Desserialize.cs" />
+    <Compile Include="Library\Serialization\Serialize.cs" />
+    <Compile Include="Library\Style\Colors.cs" />
+    <Compile Include="Library\Protheus12Xml\Reader.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Bases\Default.resx">
+      <DependentUpon>Default.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Unique\FRM_Login.resx">
+      <DependentUpon>FRM_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Unique\FRM_Main.resx">
+      <DependentUpon>FRM_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Unique\MainChildren\FRM_Main_KitAdd.resx">
+      <DependentUpon>FRM_Main_KitAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Unique\MainChildren\FRM_Main_KitDetails.resx">
+      <DependentUpon>FRM_Main_KitDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Unique\MainChildren\FRM_Main_LineTag.resx">
+      <DependentUpon>FRM_Main_LineTag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Unique\MainChildren\FRM_Main_KltTag.resx">
+      <DependentUpon>FRM_Main_KltTag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Unique\MainChildren\FRM_Main_ProductsAdd.resx">
+      <DependentUpon>FRM_Main_ProductsAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Unique\MainChildren\FRM_Main_AddressesAdd.resx">
+      <DependentUpon>FRM_Main_AddressesAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Unique\MainChildren\FRM_Main_ProductsAddressUpdateDuplicates.resx">
+      <DependentUpon>FRM_Main_ProductsAddressUpdateDuplicates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Gesk.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Icons\icon_fechar2_22x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Icons\icon_maximizar_28x28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Icons\icon_minimizar2_28x28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Icons\icon_redimensionar_28x28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\icon_Kuhnper_logo_128x128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Forms\Global\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
